@@ -7,8 +7,8 @@ pub fn build(b: *Builder) void {
     exe.linkSystemLibrary("SDL2");
     exe.linkSystemLibrary("c");
 
-    exe.addLibPath("deps\\lib");
-    exe.addIncludeDir("deps\\include");
+    exe.addLibPath("deps/lib");
+    exe.addIncludeDir("deps/include");
 
     b.default_step.dependOn(&exe.step);
     b.installArtifact(exe);
